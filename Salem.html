@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salem Handyman Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef5ff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #0066cc);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            text-align: center;
+            background: #003366;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            display: inline-block;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #0055aa;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .service {
+            background: #0055aa;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+            width: 180px;
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            background: #003366;
+        }
+
+        .review-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .review-card {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input, select, button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cc5500;
+        }
+
+        .confirmation {
+            display: none;
+            text-align: center;
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Salem Handyman Services</header>
+    <nav>
+        <a href="#services">Our Services</a>
+        <a href="#reviews">Customer Reviews</a>
+        <a href="#booking">Book a Service</a>
+    </nav>
+
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">🏠 Home Improvement</div>
+            <div class="service">🔨 Roof Repair</div>
+            <div class="service">🪚 Trim Repair</div>
+            <div class="service">🌲 Outdoor Services</div>
+            <div class="service">🚪 Carpenter Service</div>
+            <div class="service">🛠 Drywall Repair</div>
+        </div>
+    </div>
+
+    <div class="container" id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-container">
+            <div class="review-card">🏠 Home Improvement - ⭐️⭐️⭐️⭐️⭐️ <p>"Excellent service! Very professional."</p></div>
+            <div class="review-card">🔨 Roof Repair - ⭐️⭐️⭐️⭐️ <p>"Fixed my roof perfectly, highly recommend."</p></div>
+        </div>
+    </div>
+    
+    <div class="container" id="booking">
+        <h2>Book a Service</h2>
+        <form id="bookingForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <select id="serviceNeeded">
+                <option value="" disabled selected>Select a Service</option>
+                <option>Home Improvement</option>
+                <option>Roof Repair</option>
+                <option>Trim Repair</option>
+            </select>
+            <button type="submit">Book Now</button>
+        </form>
+        <div class="confirmation" id="confirmationMessage">✅ Booked! We’ll contact you soon.</div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Salem Handyman Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("confirmationMessage").style.display = "block";
+            document.getElementById("bookingForm").reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dindigul Handyman Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x600/?tools,repair') no-repeat center;
+            background-size: cover;
+            color: white;
+            padding: 100px 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .service {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .reviews {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+        .popup input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Dindigul Handyman Services</header>
+
+<section class="hero">Professional Handyman Services in Dindigul</section>
+
+<section class="services">
+    <div class="service">🏠 Home Improvement</div>
+    <div class="service">🔨 Roof Repair</div>
+    <div class="service">🪚 Trim Repair</div>
+    <div class="service">🌲 Outdoor Services</div>
+    <div class="service">🚪 Carpenter Service</div>
+    <div class="service">🛠 Drywall Repair</div>
+</section>
+
+<button onclick="openPopup()">Book Now</button>
+
+<section class="reviews">
+    <h3>Customer Reviews</h3>
+    <p>⭐️⭐️⭐️⭐️⭐️ "Fantastic work! Reliable and affordable."</p>
+    <p>⭐️⭐️⭐️⭐️ "Quick and professional!"</p>
+</section>
+
+<div id="bookingPopup" class="popup">
+    <h3>Book a Service</h3>
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="location" placeholder="Your Location">
+    <input type="text" id="service" placeholder="Service Needed">
+    <button onclick="submitBooking()">Submit</button>
+</div>
+
+<footer class="footer">© 2025 Dindigul Handyman Services. All Rights Reserved.</footer>
+
+<script>
+    function openPopup() {
+        document.getElementById("bookingPopup").style.display = "block";
+    }
+
+    function submitBooking() {
+        alert("✅ Booked! We’ll contact you soon.");
+        document.getElementById("bookingPopup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
